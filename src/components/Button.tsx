@@ -1,11 +1,17 @@
 type ButtonProps = {
-    children: any, 
+    children : any, 
     onClick : () => void
 }
 export default function Button({children, onClick}: ButtonProps){
-    return (
-        <button onClick={onClick}> 
-            {children}
-        </button>
-    )
+
+  const style = {
+    padding : '10px',
+    margin : '10px'
+  }
+
+  return (
+    <button onClick={onClick} style={style}> 
+      {children}
+    </button>
+  )
 }
