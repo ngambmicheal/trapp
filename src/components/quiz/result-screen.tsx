@@ -27,8 +27,9 @@ type ResultBoxProps = {
 }
 export function ResultsBox({question}: ResultBoxProps){
   return (
-    <p> <span> {question.selected_answer === question.correct_answer ? '+' : '-'} </span> 
-      <span dangerouslySetInnerHTML={{__html:question.question}} />
-    </p>
+    <div style={{display:'flex', marginTop:'10px'}} > 
+      <span style={{margin:'auto', padding:'10px', fontWeight:'bold'}}> {question.selected_answer === question.correct_answer ? '+' : '-'} </span> 
+      <span style={{textAlign:'left'}} dangerouslySetInnerHTML={{__html:question.question}} />
+    </div>
   )
 }

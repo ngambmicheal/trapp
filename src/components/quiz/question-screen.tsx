@@ -27,7 +27,7 @@ type questionProps = {
 export default function QuestionBox({question, answerQuestion, index, totalQuestions}: questionProps){
   return (
     <div> 
-      <div key={`question-screen-index-${index}`}> 
+      <div style={{margin:'20px', padding:'10px', borderRadius:'10px', border: '2px #555 solid'}} > 
         <h4> {question.category} </h4>
         <p dangerouslySetInnerHTML={{__html:question.question}} />
         <br /> 
@@ -35,7 +35,7 @@ export default function QuestionBox({question, answerQuestion, index, totalQuest
         <Button onClick={() =>answerQuestion(index, 'False')}> False </Button>
       </div>    
 
-      {index + 1} of {totalQuestions}
+      <div>{index + 1} of {totalQuestions} </div>
     </div>
   )
 }
